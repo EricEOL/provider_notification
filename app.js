@@ -1,8 +1,8 @@
-import dotenv from 'dotenv';
-import express from 'express';
-import mongoose from 'mongoose';
+require('dotenv').config();
+const express = require('express');
+const mongoose = require('mongoose');
+const Empenho = require('./src/models/Empenho');
 
-dotenv.config();
 const app = express();
 
 mongoose.connect(process.env.MONGO_CONNECTION_URL, {
@@ -17,8 +17,6 @@ mongoose.connect(process.env.MONGO_CONNECTION_URL, {
     }
   }
 );
-
-import Empenho from './src/models/Empenho.js';
 
 app.get('/notification', async (req, res) => {
 

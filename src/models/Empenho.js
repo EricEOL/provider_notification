@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const empenhoSchema = mongoose.Schema({
   empenho: {type: String},
@@ -7,4 +7,4 @@ const empenhoSchema = mongoose.Schema({
 
 const empenho = mongoose.model('Empenho', empenhoSchema);
 
-export default empenho;
+module.exports = empenho;
